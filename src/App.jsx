@@ -7,6 +7,7 @@ import Navbar1 from './Navbar/Navbar1'
 import Navbar2 from './Navbar/Navbar2'
 import Counter from './counter/counter'
 import Calculator from './calculator/Calculator'
+import Todolist from './todolist/Todolist'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,7 +33,8 @@ function App() {
         </div>
 
       </div> */}
-      <Calculator/>
+      {/* <Calculator/> */}
+      <Todolist/>
     </>
   )
 }
