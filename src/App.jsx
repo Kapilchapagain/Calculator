@@ -8,6 +8,8 @@ import Navbar2 from './Navbar/Navbar2'
 import Counter from './counter/counter'
 import Calculator from './calculator/Calculator'
 import Todolist from './todolist/Todolist'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Loginpage from './todolist/loginform/Loginform'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,8 +35,19 @@ function App() {
         </div>
 
       </div> */}
-      {/* <Calculator/> */}
-      <Todolist/>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/calculator' element={<Calculator/>}/>
+        <Route path='/counter' element={<Counter/>}/>
+        <Route path='/navbar' element={<Navbar/>}/>
+        <Route path='/todolist' element={<Todolist/>}/>
+        <Route path='/' element={<Loginpage/>}/>
+      </Routes>
+      </BrowserRouter>
+      {/* <Navbar/>
+      <Counter/>
+      <Calculator/>
+      <Todolist/> */}
     </>
   )
 }
